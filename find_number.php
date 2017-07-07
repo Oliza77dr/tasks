@@ -19,10 +19,14 @@ print_r($arr);
 echo "</pre>";
 
 for ($i=0;$i<$len;$i=$i+2){
-    if ($arr[$i]===$arr[$i+1]){
+     if (isset($arr[$i+1])) {
+        if ($arr[$i] === $arr[$i+1]) {
 
-    }else{
+       } else {
+            echo $arr[$i];
+            break;
+        }
+    } else{
         echo $arr[$i];
-        break;
     }
 }
